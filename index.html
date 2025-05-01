@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <div class="game-container">
+    <!-- Game Mode Popup -->
+    <div id="gameModePopup" class="popup">
+        <h2>Select Game Mode</h2>
+        <button id="vsFriendBtn">Play with Friend</button>
+        <button id="vsAIBtn">Play with AI</button>
+    </div>
+
+    <!-- Icon Selection Popup -->
+    <div id="iconChoicePopup" class="popup hidden">
+        <h2>Choose Your Icon</h2>
+        <button id="choiceX" class="icon-btn x-btn">X</button>
+        <button id="choiceO" class="icon-btn o-btn">O</button>
+    </div>
+
+    <div class="game-container hidden" id="gameContainer">
         <h1>Tic Tac Toe</h1>
-        <div id="playerChoice">
-            <p>Choose your Icon:</p>
-            <button class="choice-btn" id="choiceX">X</button>
-            <button class="choice-btn" id="choiceO">O</button>
-        </div>
         <div class="board" id="board">
             <div class="cell" data-index="0"></div>
             <div class="cell" data-index="1"></div>
@@ -25,11 +34,10 @@
             <div class="cell" data-index="7"></div>
             <div class="cell" data-index="8"></div>
         </div>
-        <div id="status">
-            <p>Waiting for players to choose their icons...</p>
-        </div>
+        <div id="status"><p>Waiting...</p></div>
         <button id="restartBtn" class="hidden">Restart Game</button>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
